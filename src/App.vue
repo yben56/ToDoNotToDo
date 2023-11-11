@@ -1,6 +1,6 @@
 <template>
-  <component :is="`bootstrap-modal`" template="login-form" title="登入"></component>
-  <component :is="`bootstrap-modal`" template="signup-form" title="註冊"></component>
+  <component :is="`bootstrap-modal`" template="login-form" :title="$t('login')"></component>
+  <component :is="`bootstrap-modal`" template="signup-form" :title="$t('signup')"></component>
 </template>
 
 <script>

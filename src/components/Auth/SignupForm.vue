@@ -1,5 +1,5 @@
 <template>
-sign up
+{{ $t('login') }}
 </template>
 
 <style scoped lang="scss">
