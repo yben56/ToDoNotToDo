@@ -5,16 +5,22 @@ import App from './App.vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
 
-import BootstrapModal from './components/BootstrapModal.vue'
-import LoginForm from './components/Auth/LoginForm.vue'
-import SignupForm from './components/Auth/SignupForm.vue'
+const app = createApp(App)
 
 //Lang
-import lang from './js/lang.js'
-
-const app = createApp(App)
 app.use(lang)
+app.component('lang-btn', LangBtn)
+import lang from './js/lang.js'
+import LangBtn from './components/LangBtn.vue'
+
+//Modal
+import BootstrapModal from './components/BootstrapModal.vue'
 app.component('bootstrap-modal', BootstrapModal)
+
+//Auth
+import LoginForm from './components/Auth/LoginForm.vue'
+import SignupForm from './components/Auth/SignupForm.vue'
 app.component('login-form', LoginForm)
 app.component('signup-form', SignupForm)
+
 app.mount('#app')

@@ -1,5 +1,5 @@
 <template>
-{{ $t('login') }}
+{{ $t('Login') }}
 </template>
 
 <style scoped lang="scss">

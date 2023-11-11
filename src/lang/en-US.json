@@ -1,4 +1,8 @@
 {
-    "login" : "Login",
-    "signup" : "Sign Up"
+    "Lang" : "Language",
+    "en-US" : "En-US",
+    "zh-TW" : "Zh-TW",
+
+    "Login" : "Login",
+    "Signup" : "Sign Up"
 }

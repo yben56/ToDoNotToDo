@@ -6,7 +6,7 @@ const messages = {
 }
 
 const lang = createI18n({
-    locale: 'zh-TW',
+    locale: localStorage.getItem('selectedLanguage') || 'zh-TW',
     messages
 })
 
