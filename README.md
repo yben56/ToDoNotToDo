@@ -1,24 +1,13 @@
-# test1
+# ToDoNotToDo
+that is the question
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Achievements
+1. Bootstrap
+2. Sass
+3. Multi-Lang
+4. Bootstrap Modal
+5. Bootstrap Grid system
+6. ajax fetch model
+7. input validation
+8. api auth (JWT)
+9. vuedraggable
