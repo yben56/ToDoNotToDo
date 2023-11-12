@@ -14,7 +14,7 @@
   </div>
 
   <button 
-    class="btn btn-sm btn-primary" 
+    class="btn btn-sm btn-primary toggle-btn" 
     data-bs-toggle="modal"
     :data-bs-target="'#' + template"
   >{{ title }}</button>
@@ -30,6 +30,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+ .toggle-btn {
+    margin: 0 5px;
+  }
+
 .modal {
   .btn-close {
     width: 10px;

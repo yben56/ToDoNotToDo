@@ -10,6 +10,7 @@ import 'bootstrap/dist/js/bootstrap.js'
 
 const app = createApp(App)
 
+/*Components*/
 //Lang
 app.use(lang)
 app.component('lang-comp', LangComp)

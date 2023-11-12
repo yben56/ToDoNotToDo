@@ -1,12 +1,19 @@
 <template>
-    <component :is="`modal-comp`" template="login-comp" :title="$t('Login')"></component>
-    <component :is="`modal-comp`" template="signup-comp" :title="$t('Signup')"></component>
-
-  <lang-comp />
+  <masthead-comp />
+  <header-comp />
+  <div id="container" class="container">
+    
+  </div>
+  <footer-comp />
 </template>
 
 <script>
+import FooterComp from './components/FooterComp.vue'
+import HeaderComp from './components/HeaderComp.vue'
+import MastheadComp from './components/MastheadComp.vue'
+
 export default {
+  components: { MastheadComp, HeaderComp, FooterComp },
   name: 'App',
 }
 </script>
