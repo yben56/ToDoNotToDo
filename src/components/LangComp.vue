@@ -31,7 +31,6 @@ export default {
 >
 <style scoped lang="scss">
 select {
-    max-width: 100px;
-    
+    max-width: 100px;   
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
-  <component :is="`bootstrap-modal`" template="login-form" :title="$t('Login')"></component>
-  <component :is="`bootstrap-modal`" template="signup-form" :title="$t('Signup')"></component>
+    <component :is="`modal-comp`" template="login-comp" :title="$t('Login')"></component>
+    <component :is="`modal-comp`" template="signup-comp" :title="$t('Signup')"></component>
 
-  <lang-btn />
+  <lang-comp />
 </template>
 
 <script>

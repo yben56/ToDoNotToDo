@@ -12,18 +12,18 @@ const app = createApp(App)
 
 //Lang
 app.use(lang)
-app.component('lang-btn', LangBtn)
+app.component('lang-comp', LangComp)
 import lang from './js/lang.js'
-import LangBtn from './components/LangBtn.vue'
+import LangComp from './components/LangComp.vue'
 
 //Modal
-import BootstrapModal from './components/BootstrapModal.vue'
-app.component('bootstrap-modal', BootstrapModal)
+import ModalComp from './components/ModalComp.vue'
+app.component('modal-comp', ModalComp)
 
 //Auth
-import LoginForm from './components/Auth/LoginForm.vue'
-import SignupForm from './components/Auth/SignupForm.vue'
-app.component('login-form', LoginForm)
-app.component('signup-form', SignupForm)
+import LoginComp from './components/Auth/LoginComp.vue'
+import SignupComp from './components/Auth/SignupComp.vue'
+app.component('login-comp', LoginComp)
+app.component('signup-comp', SignupComp)
 
 app.mount('#app')
