@@ -7,8 +7,25 @@
                         <lang-comp />
                     </div>
                     <div class="auth">
-                        <component :is="`modal-comp`" template="login-comp" :title="$t('Login')"></component>
-                        <component :is="`modal-comp`" template="signup-comp" :title="$t('Signup')"></component>
+                        <!--Login-->
+                        <component :is="`modal-comp`" template="login-comp" :title="$t('Login')">
+                            <template v-slot:toggle-btn>
+                                <button class="login-btn btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#login-comp">
+                                    <i class="fa-solid fa-right-to-bracket"></i>
+                                    {{ $t('Login') }}
+                                </button>
+                            </template>
+                        </component>
+
+                        <!--Signup-->
+                        <component :is="`modal-comp`" template="signup-comp" :title="$t('Signup')">
+                            <template v-slot:toggle-btn>
+                                <button class="signup-btn btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#signup-comp">
+                                    <i class="fa-solid fa-pencil"></i>
+                                    {{ $t('Signup') }}
+                                </button>
+                            </template>
+                        </component>
                     </div>
                 </div>
             </div>
@@ -32,6 +49,10 @@
             display: inline-block;
             float: right;
         }
+    }
+
+    .login-btn {
+        margin: 0 10px;
     }
 }
 </style>
