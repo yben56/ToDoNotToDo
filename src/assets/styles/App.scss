@@ -1,5 +1,5 @@
 
-$letter-spacing: 2px;
+$letter-spacing: 1px;
 $regular: 400;
 $bold: 700;
 
@@ -62,15 +62,6 @@ a img {
 
 /*Form*/
 form {
-	.form-group {
-		margin-bottom: 15px;
-
-		label {
-			margin-bottom: 5px;
-			font-weight: bold;
-		}
-	}
-
 	.submit {
 		float: right;
 	}
