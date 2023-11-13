@@ -1,17 +1,19 @@
 <template>
     <div class="login">   
-        <form @submit.prevent="validate">
-            <div class="form-group">
-                <label>{{ $t('Email')}}</label>
-                <input type="text" class="form-control" v-bind:class="{ 'is-invalid': emailError }" id="email" v-model="email">
-                <div class="invalid-feedback" id="feedback-1" v-if="errors[0]">{{ errors[0].message }}</div>
-            </div>
-            <div class="form-group">
-                <label>{{ $t('Password')}}</label>
-                <input type="password" class="form-control" v-bind:class="{ 'is-invalid': passwordError }" id="password" v-model="password">
-                <div class="invalid-feedback" id="feedback-2" v-if="errors[1]">{{ errors[1].message }}</div>
-            </div>
-            <button type="submit" class="btn btn-danger submit">{{ $t('Submit')}}</button>
+        <form @submit.prevent="validate" class="row g-3">
+			<div class="col-md-12">
+				<label class="form-label">{{ $t('Email') }}</label>
+				<input type="text" class="form-control" v-bind:class="{ 'is-invalid': emailError }" id="email" v-model="email" required>
+				<div class="invalid-feedback" id="feedback-0" v-if="errors[0]">{{ errors[0].message }}</div>
+			</div>
+			<div class="col-md-12">
+				<label class="form-label">{{ $t('Password') }}</label>
+				<input type="password" class="form-control" v-bind:class="{ 'is-invalid': passwordError }" id="password" v-model="password" required>
+				<div class="invalid-feedback" id="feedback-1" v-if="errors[1]">{{ errors[1].message }}</div>
+			</div>
+			<div class="col-md-12">
+				<button type="submit" class="btn btn-danger submit">{{ $t('Submit')}}</button>
+			</div>
         </form>
     </div>
 </template>
@@ -29,36 +31,36 @@
 		},
 		methods: {
 			validate() {
-				this.errors = [];
+				this.errors = []
 				
 				//email validate
 				if(this.email.length < 10 || this.email.search('@') == -1) {
-					this.emailError = true;
+					this.emailError = true
 					this.errors.push({
 						'message': this.$t('ErrorInvalidatEmail')
 					});
 				} else {
-					document.getElementById('email').className = "form-control is-valid";
+					document.getElementById('email').className = "form-control is-valid"
 					this.errors.push({
 						'message': 'Validated.'
 					});
-					document.getElementById('feedback-1').className = "valid-feedback";
+					document.getElementById('feedback-0').className = "valid-feedback"
 				}
 				
 				//password validate
-				var regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+				var regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
 				if(this.password.length < 8 || this.password.match(regex) == null) {
-					this.passwordError = true;
+					this.passwordError = true
 					this.errors.push({
 						'field': 'password',
 						'message': this.$t('ErrorInvalidatPassword')
 					});
 				} else {
-					document.getElementById('password').className = "form-control is-valid";
+					document.getElementById('password').className = "form-control is-valid"
 					this.errors.push({
 						'message': 'Validated.'
 					});
-					document.getElementById('feedback-2').className = "valid-feedback";
+					document.getElementById('feedback-1').className = "valid-feedback"
 				}
 			}
 		}

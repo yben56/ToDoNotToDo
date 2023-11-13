@@ -4,11 +4,17 @@
     "zh-TW" : "Zh-TW",
 
     "Email" : "Email",
+    "Firstname" : "First Name",
+    "Lastname" : "Last Name",
     "Login" : "Login",
     "Password" : "Password",
+    "RePassword" : "Re Password",
     "Signup" : "Sign Up",
     "Submit" : "Submit",
 
     "ErrorInvalidatEmail" : "Please provide a valid email address.",
-    "ErrorInvalidatPassword" : "Password Minimum eight characters, at least one letter and one number."
+    "ErrorInvalidatFirstname" : "Minimum 2 characters",
+    "ErrorInvalidatLastname" : "Minimum 2 characters",
+    "ErrorInvalidatPassword" : "Minimum 8 characters, at least 1 letter and 1 number.",
+    "ErrorInvalidatPasswordsMatch" : "Password do not match"
 }
