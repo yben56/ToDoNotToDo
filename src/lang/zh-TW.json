@@ -3,6 +3,9 @@
     "en-US" : "英文(美國)",
     "zh-TW" : "中文(台灣)",
 
+    "Email" : "電子郵件",
     "Login" : "登入",
-    "Signup" : "註冊"
+    "Password" : "密碼",
+    "Signup" : "註冊",
+    "Submit" : "提交"  
 }

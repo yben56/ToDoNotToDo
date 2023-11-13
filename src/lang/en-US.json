@@ -3,6 +3,9 @@
     "en-US" : "En-US",
     "zh-TW" : "Zh-TW",
 
+    "Email" : "Email",
     "Login" : "Login",
-    "Signup" : "Sign Up"
+    "Password" : "Password",
+    "Signup" : "Sign Up",
+    "Submit" : "Submit"
 }
