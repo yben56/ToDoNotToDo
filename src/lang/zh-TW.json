@@ -7,5 +7,8 @@
     "Login" : "登入",
     "Password" : "密碼",
     "Signup" : "註冊",
-    "Submit" : "提交"  
+    "Submit" : "提交" ,
+
+    "ErrorInvalidatEmail" : "請提供一個有效的電子郵件地址",
+    "ErrorInvalidatPassword" : "密碼 至少八個字符，至少一個字母和一個數字"
 }

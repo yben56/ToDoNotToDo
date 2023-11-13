@@ -35,7 +35,7 @@
 				if(this.email.length < 10 || this.email.search('@') == -1) {
 					this.emailError = true;
 					this.errors.push({
-						'message': 'Please provide a valid email address.'
+						'message': this.$t('ErrorInvalidatEmail')
 					});
 				} else {
 					document.getElementById('email').className = "form-control is-valid";
@@ -51,7 +51,7 @@
 					this.passwordError = true;
 					this.errors.push({
 						'field': 'password',
-						'message': 'password Minimum eight characters, at least one letter and one number.'
+						'message': this.$t('ErrorInvalidatPassword')
 					});
 				} else {
 					document.getElementById('password').className = "form-control is-valid";

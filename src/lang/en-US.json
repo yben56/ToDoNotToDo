@@ -7,5 +7,8 @@
     "Login" : "Login",
     "Password" : "Password",
     "Signup" : "Sign Up",
-    "Submit" : "Submit"
+    "Submit" : "Submit",
+
+    "ErrorInvalidatEmail" : "Please provide a valid email address.",
+    "ErrorInvalidatPassword" : "Password Minimum eight characters, at least one letter and one number."
 }
