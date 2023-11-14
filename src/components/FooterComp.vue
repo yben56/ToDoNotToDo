@@ -19,7 +19,7 @@
 #footer {
 	margin-top: 30px;
 	padding: 30px 0;
-    border-top: solid 1px hsl(0, 0%, 98%);
+    border-top: solid 1px #eee;
 	text-align: center;
     background-color: #fdfdfd;
     color: #555;
