@@ -1,7 +1,16 @@
 <template>
     <div id="footer">
         <div class="container">
-            <i>Page design by: benjamin-w</i>
+            <div class="row mb-3">
+                <i>-- Page design by: benjamin-w --</i>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <i class="fa-brands fa-square-facebook m-3"></i>
+                    <i class="fa-brands fa-square-twitter m-3"></i>
+                    <i class="fa-brands fa-youtube m-3"></i>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -9,9 +18,15 @@
 <style scope lang="scss">
 #footer {
 	margin-top: 30px;
-	padding: 50px 0;
-    border-top: solid 1px #f4f4f4;
+	padding: 30px 0;
+    border-top: solid 1px hsl(0, 0%, 98%);
 	text-align: center;
+    background-color: #fdfdfd;
     color: #555;
+
+    .fa-brands {
+        font-size: 25px;
+        display: inline-block;
+    }
 }
 </style>

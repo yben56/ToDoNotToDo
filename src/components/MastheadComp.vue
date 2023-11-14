@@ -36,6 +36,7 @@
 <style scoped lang="scss">
 #masthead {
 	padding: 15px;
+    background-color: #fdfdfd;
     border-bottom: solid 1px #f4f4f4;
 
     .container {
