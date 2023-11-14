@@ -2,12 +2,11 @@
 that is the question
 
 ## Achievements
-1. Bootstrap
+1. Bootstrap (form, carousel, cards etc.)
 2. Sass
 3. Multi-Lang
 4. Bootstrap Modal
-5. Bootstrap Grid system
-6. ajax fetch model
-7. input validation
-8. api auth (JWT)
-9. vuedraggable
+5. Input validation
+6. Ajax fetch model
+7. Api auth (JWT)
+8. Vue draggable
