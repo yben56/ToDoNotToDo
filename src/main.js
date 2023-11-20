@@ -10,6 +10,10 @@ import 'bootstrap/dist/js/bootstrap.js'
 
 const app = createApp(App)
 
+//Store
+import auth from './store/auth'
+app.use(auth)
+
 /*Components*/
 //Lang
 app.use(lang)
@@ -28,7 +32,9 @@ app.component('modal-comp', ModalComp)
 //Auth
 import LoginComp from './components/Auth/LoginComp.vue'
 import SignupComp from './components/Auth/SignupComp.vue'
+import LogoutComp from './components/Auth/LogoutComp.vue'
 app.component('login-comp', LoginComp)
 app.component('signup-comp', SignupComp)
+app.component('logout-comp', LogoutComp)
 
 app.mount('#app')

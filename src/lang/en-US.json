@@ -7,6 +7,8 @@
     "Firstname" : "First Name",
     "Lastname" : "Last Name",
     "Login" : "Login",
+    "LoginInfo" : "Enter email & password as you like",
+    "Logout" : "Logout",
     "Password" : "Password",
     "RePassword" : "Re Password",
     "Signup" : "Sign Up",

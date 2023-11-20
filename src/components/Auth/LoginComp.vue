@@ -24,6 +24,9 @@
 				<div class="invalid-feedback" v-if="errors[1]">{{ errors[1].message }}</div>
 			</div>
 			<div class="col-md-12">
+				<i class="text-danger">* {{ $t('LoginInfo') }}</i>
+			</div>
+			<div class="col-md-12">
 				<button type="submit" class="btn btn-danger submit">{{ $t('Submit')}}</button>
 			</div>
         </form>
@@ -85,7 +88,8 @@ export default {
 				password: this.password
 			})
 			.then(response => {
-				console.log(response.data.token)
+				console.log(response.data)
+				this.$store.dispatch('login', response.data)
 			})
 			.catch(error => {
 				console.error(error)

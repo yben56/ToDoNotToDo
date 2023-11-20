@@ -15,6 +15,6 @@ import FooterComp from './components/FooterComp.vue'
 
 export default {
   components: { MastheadComp, HeaderComp,CardsComp, FooterComp },
-  name: 'App',
+  name: 'App'
 }
 </script>

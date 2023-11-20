@@ -7,6 +7,8 @@
     "Firstname" : "名子",
     "Lastname" : "姓氏",
     "Login" : "登入",
+    "LoginInfo" : "Emai & password隨便填入",
+    "Logout" : "登出",
     "Password" : "密碼",
     "RePassword" : "重新輸入密碼",
     "Signup" : "註冊",
