@@ -17,6 +17,10 @@ app.component('lang-comp', LangComp)
 import lang from './js/lang.js'
 import LangComp from './components/LangComp.vue'
 
+//Axios
+import axios from 'axios'
+app.config.globalProperties.$axios = axios
+
 //Modal
 import ModalComp from './components/ModalComp.vue'
 app.component('modal-comp', ModalComp)

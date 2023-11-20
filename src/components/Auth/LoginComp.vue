@@ -31,8 +31,6 @@
 </template>
 
 <script>
-import Postman from '/src/js/Postman.js'
-
 export default {	
 	data() {
 		return {
@@ -82,15 +80,15 @@ export default {
 			}
 		},
 		submitForm() {
-			
-			(new Postman().Send(
-				'GET',
-				'/database/List.json',
-				{'a':1}
-			)).then(data => {
-				console.log(data)
-			}).catch(error => {
-				console.error(error);
+			this.$axios.get('/database/Login.json', {
+				email: this.email,
+				password: this.password
+			})
+			.then(response => {
+				console.log(response.data.token)
+			})
+			.catch(error => {
+				console.error(error)
 			})
 		}
 	}
