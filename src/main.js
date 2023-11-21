@@ -39,4 +39,7 @@ app.component('signup-comp', SignupComp)
 app.component('signupsuccess-comp', SignupSuccessComp)
 app.component('logout-comp', LogoutComp)
 
+import AddNewListComp from './components/AddNewListComp.vue'
+app.component('addnewlist-comp', AddNewListComp)
+
 app.mount('#app')

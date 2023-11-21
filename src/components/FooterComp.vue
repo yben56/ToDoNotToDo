@@ -17,8 +17,8 @@
 
 <style scope lang="scss">
 #footer {
-	margin-top: 30px;
-	padding: 30px 0;
+	margin-top: 60px;
+	padding: 60px 0;
     border-top: solid 1px #eee;
 	text-align: center;
     background-color: #fdfdfd;
