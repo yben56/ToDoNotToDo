@@ -9,4 +9,6 @@ that is the question
 5. Input validation
 6. Ajax fetch model (use axios)
 7. Api auth (JWT)
-8. Vue draggable
+8. Auth system
+9. ToDoList
+10. Vue draggable
