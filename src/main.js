@@ -39,7 +39,17 @@ app.component('signup-comp', SignupComp)
 app.component('signupsuccess-comp', SignupSuccessComp)
 app.component('logout-comp', LogoutComp)
 
+//Pages
 import AddNewListComp from './components/AddNewListComp.vue'
 app.component('addnewlist-comp', AddNewListComp)
+
+import IndexComp from './components/IndexComp.vue'
+app.component('index-comp', IndexComp)
+
+import ToDoListComp from './components/ToDoListComp.vue'
+app.component('todolist-comp', ToDoListComp)
+
+import ContactComp from './components/ContactComp.vue'
+app.component('contact-comp', ContactComp)
 
 app.mount('#app')
