@@ -58,7 +58,6 @@ export default {
 }
 </script>
 
-
 <style scoped lang="scss">
 #masthead {
 	padding: 15px;

@@ -2,6 +2,7 @@
   <masthead-comp />
   <header-comp />
   <div id="container" class="container">
+    <signupsuccess-comp />
     <cards-comp />
   </div>
   <footer-comp />

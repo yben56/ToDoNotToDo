@@ -6,7 +6,6 @@
 				<input 
 					type="text"
 					:class="['form-control', {'is-invalid': emailError, 'is-valid': !emailError && submit}]" 
-					ref="email" 
 					v-model="email" 
 					required
 				>
@@ -17,14 +16,13 @@
 				<input 
 					type="password" 
 					:class="['form-control', {'is-invalid': passwordError, 'is-valid': !passwordError && submit}]" 
-					ref="password" 
 					v-model="password" 
 					required
 				>
 				<div class="invalid-feedback" v-if="errors[1]">{{ errors[1].message }}</div>
 			</div>
 			<div class="col-md-12">
-				<i class="text-danger">* {{ $t('LoginInfo') }}</i>
+				<i class="text-danger">* {{ $t('FalseInfo') }}</i>
 			</div>
 			<div class="col-md-12">
 				<button type="submit" class="btn btn-danger submit">{{ $t('Submit')}}</button>
@@ -56,9 +54,8 @@ export default {
 					'message': this.$t('ErrorInvalidatEmail')
 				})
 			} else {
-				this.$refs.email.className = "form-control is-valid"
-				//this.errors.push({'message': 'Validate'})
-				this.errors.pop()
+				this.emailError = false
+				this.errors.push({'message': ''})
 			}
 			
 			//password validate
@@ -70,15 +67,14 @@ export default {
 					'message': this.$t('ErrorInvalidatPassword')
 				})
 			} else {
-				this.$refs.password.className = "form-control is-valid"
-				//this.errors.push({'message': 'Validate'})
-				this.errors.pop()
+				this.passwordError = false
+				this.errors.push({'message': ''})
 			}
 
-			this.submit = false
+			this.submit = true //submit btn been clicked
 
 			//Only trigger when validation success
-			if ( this.errors.length === 0 ) {
+			if ( !this.emailError && !this.passwordError ) {
 				this.submitForm()
 			}
 		},
@@ -86,12 +82,10 @@ export default {
 			this.$axios.get('/database/Login.json', {
 				email: this.email,
 				password: this.password
-			})
-			.then(response => {
+			}).then(response => {
 				console.log(response.data)
 				this.$store.dispatch('login', response.data)
-			})
-			.catch(error => {
+			}).catch(error => {
 				console.error(error)
 			})
 		}

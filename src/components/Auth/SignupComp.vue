@@ -3,29 +3,57 @@
         <form @submit.prevent="validate" class="row g-3">
             <div class="col-md-6">
                 <label class="form-label">{{ $t('Firstname') }}</label>
-                <input type="text" class="form-control" v-bind:class="{ 'is-invalid': firstnameError }" id="firstname" v-model="firstname" required>
-                <div class="invalid-feedback" id="feedback-0" v-if="errors[0]">{{ errors[0].message }}</div>
+                <input 
+					type="text" 
+					:class="['form-control', { 'is-invalid': firstnameError, 'is-valid': !firstnameError && submit }]"
+					v-model="firstname" 
+					required
+				>
+                <div class="invalid-feedback" v-if="errors[0]">{{ errors[0].message }}</div>
             </div>
             <div class="col-md-6">
                 <label class="form-label">{{ $t('Lastname') }}</label>
-                <input type="text" class="form-control" v-bind:class="{ 'is-invalid': lastnameError }" id="lastname" v-model="lastname" required>
-                <div class="invalid-feedback" id="feedback-1" v-if="errors[1]">{{ errors[1].message }}</div>
+                <input 
+					type="text" 
+					:class="['form-control', { 'is-invalid': lastnameError, 'is-valid': !lastnameError && submit }]"
+					v-model="lastname"
+					required
+				>
+                <div class="invalid-feedback" v-if="errors[1]">{{ errors[1].message }}</div>
             </div>
             <div class="col-md-12">
                 <label class="form-label">{{ $t('Email') }}</label>
-                <input type="text" class="form-control" v-bind:class="{ 'is-invalid': emailError }" id="email" v-model="email" required>
-                <div class="invalid-feedback" id="feedback-2" v-if="errors[2]">{{ errors[2].message }}</div>
+                <input 
+					type="text"
+					:class="['form-control', {'is-invalid': emailError, 'is-valid': !emailError && submit }]" 
+					v-model="email"
+					required
+				>
+                <div class="invalid-feedback" v-if="errors[2]">{{ errors[2].message }}</div>
             </div>
             <div class="col-md-12">
                 <label class="form-label">{{ $t('Password') }}</label>
-                <input type="password" class="form-control" v-bind:class="{ 'is-invalid': passwordError }" id="password" v-model="password" required>
-                <div class="invalid-feedback" id="feedback-3" v-if="errors[3]">{{ errors[3].message }}</div>
+                <input
+					type="password"
+					:class="['form-control', { 'is-invalid': passwordError, 'is-valid': !passwordError && submit }]"
+					v-model="password"
+					required
+				>
+                <div class="invalid-feedback" v-if="errors[3]">{{ errors[3].message }}</div>
             </div>
             <div class="col-md-12">
                 <label class="form-label">{{ $t('RePassword') }}</label>
-                <input type="password" class="form-control" v-bind:class="{ 'is-invalid': repasswordError }" id="repassword" v-model="repassword" required>
-                <div class="invalid-feedback" id="feedback-4" v-if="errors[4]">{{ errors[4].message }}</div>
+                <input
+					type="password"
+					:class="['form-control', {'is-invalid': repasswordError, 'is-valid': !repasswordError && submit }]" 
+					v-model="repassword"
+					required
+				>
+                <div class="invalid-feedback" v-if="errors[4]">{{ errors[4].message }}</div>
             </div>
+			<div class="col-md-12">
+				<i class="text-danger">* {{ $t('FalseInfo') }}</i>
+			</div>
             <div class="col-md-12">
 				<button type="submit" class="btn btn-danger submit">{{ $t('Submit') }}</button>
 			</div>
@@ -47,7 +75,8 @@ export default {
 			emailError: false,
 			passwordError: false,
 			repasswordError: false,
-			errors: []
+			errors: [],
+			submit: false,
 		}
 	},
 	methods: {
@@ -61,11 +90,8 @@ export default {
 					'message': this.$t('ErrorInvalidatFirstname')
 				})
 			} else {
-				document.getElementById('firstname').className = "form-control is-valid"
-				this.errors.push({
-					'message': 'Validated.'
-				})
-				document.getElementById('feedback-0').className = "valid-feedback"
+				this.firstnameError = false
+				this.errors.push({'message': ''})
 			}
 
 			//lastname validate
@@ -75,11 +101,8 @@ export default {
 					'message': this.$t('ErrorInvalidatLastname')
 				})
 			} else {
-				document.getElementById('lastname').className = "form-control is-valid"
-				this.errors.push({
-					'message': 'Validated.'
-				})
-				document.getElementById('feedback-1').className = "valid-feedback"
+				this.lastnameError = false
+				this.errors.push({'message': ''})
 			}
 
 			//email validate
@@ -89,11 +112,8 @@ export default {
 					'message': this.$t('ErrorInvalidatEmail')
 				})
 			} else {
-				document.getElementById('email').className = "form-control is-valid"
-				this.errors.push({
-					'message': 'Validated.'
-				})
-				document.getElementById('feedback-2').className = "valid-feedback"
+				this.emailError = false
+				this.errors.push({'message': ''})
 			}
 			
 			//password validate
@@ -105,11 +125,8 @@ export default {
 					'message': this.$t('ErrorInvalidatPassword')
 				})
 			} else {
-				document.getElementById('password').className = "form-control is-valid"
-				this.errors.push({
-					'message': 'Validated.'
-				})
-				document.getElementById('feedback-3').className = "valid-feedback"
+				this.passwordError = false
+				this.errors.push({'message': ''})
 			}
 
 			// repassword validate
@@ -127,12 +144,29 @@ export default {
 					})
 				}
 			} else {
-				document.getElementById('repassword').className = "form-control is-valid"
-				this.errors.push({
-					'message': 'Validated.'
-				})
-				document.getElementById('feedback-4').className = "valid-feedback"
+				this.repasswordError = false
+				this.errors.push({'message': ''})
 			}
+
+			this.submit = true //submit btn been clicked
+
+			//Only trigger when validation success
+			if ( !this.firstnameError && !this.lastnameError && !this.emailError && !this.passwordError && !this.repasswordError ) {
+				this.submitForm()
+			}
+		},
+		submitForm() {
+			this.$axios.get('/database/Signup.json', {
+				firstname: this.firstname,
+				lastname: this.lastname,
+				email: this.email,
+				password: this.password
+			}).then(response => {
+				console.log(response.data)
+				this.$store.dispatch('signup', response.data)
+			}).catch(error => {
+				console.error(error)
+			})
 		}
 	}
 }

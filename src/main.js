@@ -32,9 +32,11 @@ app.component('modal-comp', ModalComp)
 //Auth
 import LoginComp from './components/Auth/LoginComp.vue'
 import SignupComp from './components/Auth/SignupComp.vue'
+import SignupSuccessComp from './components/Auth/SignupSuccessComp.vue'
 import LogoutComp from './components/Auth/LogoutComp.vue'
 app.component('login-comp', LoginComp)
 app.component('signup-comp', SignupComp)
+app.component('signupsuccess-comp', SignupSuccessComp)
 app.component('logout-comp', LogoutComp)
 
 app.mount('#app')

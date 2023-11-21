@@ -7,6 +7,15 @@ export default createStore({
     firstname: null
   },
   mutations: {
+    signup( state, data) {
+      localStorage.setItem('auth', JSON.stringify(data))
+      localStorage.setItem('signupsuccess', true)
+      window.location.reload()
+    },
+    start( state ) {
+      localStorage.setItem('signupsuccess', false)
+      window.location.reload()
+    },
     login( state, data ) {
       /*
       //shortturn, vanish after page refresh
@@ -33,14 +42,17 @@ export default createStore({
     }
   },
   actions: {
+    signup({ commit }, data){
+      commit('signup', data)
+    },
+    start ({ commit }) {
+      commit('start')
+    },
     async login({ commit }, data) {
       try {
         commit('login', data)
-
-        return { success: true, data: data }
       } catch (error) {
         console.error(error)
-        return { success: false, error: error }
       }
     },
     logout ({ commit }) {
