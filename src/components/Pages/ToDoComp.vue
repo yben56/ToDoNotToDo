@@ -5,10 +5,14 @@
             <router-link to="/ToDo">
                 <button type="button" class="btn btn-sm btn-link mt-2">ToDo /</button>
             </router-link>
-            <button type="button" class="btn btn-sm btn-primary float-end">
-                <i class="fa-solid fa-plus"></i>
-                {{ $t('AddList') }}
-            </button>
+            <component :is="`modal-comp`" template="AddToDoComp" :title="$t('AddToDo')">
+                <template v-slot:toggle-btn>
+                    <button class="btn btn-sm btn-primary float-end" data-bs-toggle="modal" data-bs-target="#AddToDoComp" >
+                        <i class="fa-solid fa-plus"></i>
+                        {{ $t('AddToDo') }}
+                    </button> 
+                </template>
+            </component>
         </div>
         <hr><br>
         <div class="list-group col-md-6">

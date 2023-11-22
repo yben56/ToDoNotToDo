@@ -21,7 +21,7 @@ app.use(authentication)
 /*Components*/
 //Lang
 app.use(lang)
-app.component('lang-comp', LangComp)
+app.component('LangComp', LangComp)
 import lang from '@/js/lang.js'
 import LangComp from '@/components/LangComp.vue'
 
@@ -31,15 +31,18 @@ app.config.globalProperties.$axios = axios
 
 //Modal
 import ModalComp from '@/components/ModalComp.vue'
-app.component('modal-comp', ModalComp)
+app.component('ModalComp', ModalComp)
 
-//Auth
+//Auth (Modal)
 import LoginComp from '@/components/Auth/LoginComp.vue'
 import SignupComp from '@/components/Auth/SignupComp.vue'
 import LogoutComp from '@/components/Auth/LogoutComp.vue'
-app.component('login-comp', LoginComp)
-app.component('signup-comp', SignupComp)
-app.component('logout-comp', LogoutComp)
+app.component('LoginComp', LoginComp)
+app.component('SignupComp', SignupComp)
+app.component('LogoutComp', LogoutComp)
 
-//Pages
+//Btn (Modal)
+import AddToDoComp from '@/components/AddToDoComp.vue'
+app.component('AddToDoComp', AddToDoComp)
+
 app.mount('#app')

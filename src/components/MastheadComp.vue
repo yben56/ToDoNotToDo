@@ -9,9 +9,9 @@
                     <div class="auth">
                         <div v-if="!auth">
                             <!--Login-->
-                            <component :is="`modal-comp`" template="login-comp" :title="$t('Login')">
+                            <component :is="`modal-comp`" template="LoginComp" :title="$t('Login')">
                                 <template v-slot:toggle-btn>
-                                    <button class="login-btn btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#login-comp">
+                                    <button class="login-btn btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#LoginComp">
                                         <i class="fa-solid fa-right-to-bracket"></i>
                                         {{ $t('Login') }}
                                     </button>
@@ -19,9 +19,9 @@
                             </component>
 
                             <!--Signup-->
-                            <component :is="`modal-comp`" template="signup-comp" :title="$t('Signup')">
+                            <component :is="`modal-comp`" template="SignupComp" :title="$t('Signup')">
                                 <template v-slot:toggle-btn>
-                                    <button class="signup-btn btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#signup-comp">
+                                    <button class="signup-btn btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#SignupComp">
                                         <i class="fa-solid fa-pencil"></i>
                                         {{ $t('Signup') }}
                                     </button>
@@ -32,7 +32,7 @@
                             <div class="btn-group">
                                 <b class="mt-1 me-3">{{ auth.firstname }}</b>
                                 <!--Logout-->
-                                <logout-comp />
+                                <LogoutComp />
                             </div>
                         </div>
                     </div>
