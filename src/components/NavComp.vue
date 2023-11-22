@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import { auth } from '../js/auth.js'
+import { auth } from '@/js/auth.js'
 
 export default {
     computed: {

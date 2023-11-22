@@ -9,8 +9,7 @@ const authentication = createStore({
   mutations: {
     signup( state, data) {
       localStorage.setItem('auth', JSON.stringify(data))
-      localStorage.setItem('signupsuccess', true)
-      window.location.href = '/'
+      window.location.href = '/SignupSuccess'
     },
     start( state ) {
       localStorage.setItem('signupsuccess', false)

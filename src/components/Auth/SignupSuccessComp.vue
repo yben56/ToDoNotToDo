@@ -1,12 +1,14 @@
 <template>
-	<div v-if="auth">
-		<div class="col-md-6 offset-md-3">
+	<div v-if="auth" class="signupsuccess container">
+		<div class="col-md-6 offset-md-3 mt-5">
 			<div class="alert alert-success" role="alert">
 				<h4 class="alert-heading">{{ $t('Congratulations') }}</h4>
 				<p>{{ $t('StartInfo') }}</p>
 				<hr>
 				<div class="text-end">
-					<button type="button" class="btn btn-warning" @click="start">{{ $t('Start') }}</button>
+					<router-link to="/">
+						<button type="button" class="btn btn-warning">{{ $t('Start') }}</button>
+					</router-link>
 				</div>
 			</div>
 		</div>
@@ -14,22 +16,19 @@
 </template>
 
 <script>
-export default {	
-	methods: {
-		start() {
-			this.$store.dispatch('start')
-		}
-	},
-	computed: {
-		successinfo() {
-			let signupsuccess = JSON.parse(localStorage.getItem('signupsuccess'))
+import { auth } from '@/js/auth.js'
 
-			if ( signupsuccess == true ) {
-				return true
-			} else {
-				return false
-			}
-		}
+export default {
+	computed: {
+		auth() {
+            return auth()
+        }
 	}
 }
 </script>
+
+<style scoped lang="scss">
+.signupsuccess {
+	min-height: 400px;
+}
+</style>

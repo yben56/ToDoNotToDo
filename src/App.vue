@@ -6,9 +6,9 @@
 </template>
 
 <script>
-import MastheadComp from './components/MastheadComp.vue'
-import NavComp from './components/NavComp.vue'
-import FooterComp from './components/FooterComp.vue'
+import MastheadComp from '@/components/MastheadComp.vue'
+import NavComp from '@/components/NavComp.vue'
+import FooterComp from '@/components/FooterComp.vue'
 
 export default {
   components: { MastheadComp, NavComp, FooterComp },

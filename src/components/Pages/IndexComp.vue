@@ -1,16 +1,15 @@
 <template>
     <header-comp />
     <div id="container" class="container">
-        <signupsuccess-comp />
         <cards-comp />
         <add-new-list-comp  v-if="auth"/>
     </div>
 </template>
 
 <script>
-import HeaderComp from '../components/HeaderComp.vue'
-import CardsComp from '../components/CardsComp.vue'
-import AddNewListComp from '../components/AddNewListComp.vue'
+import HeaderComp from '@/components/HeaderComp.vue'
+import CardsComp from '@/components/CardsComp.vue'
+import AddNewListComp from '@/components/AddNewListComp.vue'
 
 export default {	
 	components: { HeaderComp, CardsComp, AddNewListComp },

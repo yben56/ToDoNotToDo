@@ -1,17 +1,16 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
-import IndexComp from '../components/IndexComp.vue'
-import SignupSuccessComp from '../components/Auth/SignupSuccessComp.vue'
-import ToDoComp from '../components/ToDoComp.vue'
-import ListComp from '../components/ListComp.vue'
-import ContactComp from '../components/ContactComp.vue'
-
+import SignupSuccessComp from '@/components/Auth/SignupSuccessComp.vue'
+import IndexComp from '@/components/Pages/IndexComp.vue'
+import ToDoComp from '@/components/Pages/ToDoComp.vue'
+import ListComp from '@/components/Pages/ListComp.vue'
+import ContactComp from '@/components/Pages/ContactComp.vue'
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
+      { path: '/SignupSuccess', component: SignupSuccessComp },
       { path: '/', component: IndexComp },
-      { path: '/SignupSuccessComp', component: SignupSuccessComp },
       { path: '/ToDo', component: ToDoComp },
       { path: '/List', component: ListComp },
       { path: '/Contact', component: ContactComp },

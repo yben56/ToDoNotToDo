@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import lang from '../js/lang.js'
+import lang from '@/js/lang.js'
 
 export default {
     data() {

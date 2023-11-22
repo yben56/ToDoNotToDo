@@ -16,7 +16,6 @@
   <slot name="toggle-btn"></slot>
 </template>
 <script>
-
 export default {
   props: [
     'template',
