@@ -1,4 +1,7 @@
 [
     {"id": 1, "todo": "大潤發", "list_num": 2},
-    {"id": 2, "todo": "好事多", "list_num": 3}
+    {"id": 2, "todo": "好事多", "list_num": 3},
+    {"id": 3, "todo": "寶雅", "list_num": 9},
+    {"id": 4, "todo": "新光三越", "list_num": 3},
+    {"id": 5, "todo": "勝利早點", "list_num": 8}
 ]

@@ -10,9 +10,13 @@ import 'bootstrap/dist/js/bootstrap.js'
 
 const app = createApp(App)
 
-//Store
-import auth from './store/auth'
-app.use(auth)
+//Routes
+import router from './js/routes'
+app.use(router)
+
+//Auth
+import { authentication, auth } from './js/auth'
+app.use(authentication)
 
 /*Components*/
 //Lang
@@ -42,14 +46,5 @@ app.component('logout-comp', LogoutComp)
 //Pages
 import AddNewListComp from './components/AddNewListComp.vue'
 app.component('addnewlist-comp', AddNewListComp)
-
-import IndexComp from './components/IndexComp.vue'
-app.component('index-comp', IndexComp)
-
-import ToDoListComp from './components/ToDoListComp.vue'
-app.component('todolist-comp', ToDoListComp)
-
-import ContactComp from './components/ContactComp.vue'
-app.component('contact-comp', ContactComp)
 
 app.mount('#app')

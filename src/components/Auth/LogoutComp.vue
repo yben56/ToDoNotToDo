@@ -5,8 +5,11 @@
 </template>
 
 <script>
+import { auth } from '../../js/auth.js'
+
 export default {	
 	methods: {
+		auth,
 		logout() {
 			this.$store.dispatch('logout')
 		}

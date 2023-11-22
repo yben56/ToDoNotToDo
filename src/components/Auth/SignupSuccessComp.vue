@@ -1,5 +1,5 @@
 <template>
-	<div v-if="successinfo">
+	<div v-if="auth">
 		<div class="col-md-6 offset-md-3">
 			<div class="alert alert-success" role="alert">
 				<h4 class="alert-heading">{{ $t('Congratulations') }}</h4>

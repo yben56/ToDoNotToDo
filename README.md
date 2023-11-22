@@ -2,6 +2,7 @@
 that is the question
 
 ## Achievements
+0. vue router
 1. Bootstrap (form, carousel, cards etc.)
 2. Sass
 3. Multi-Lang
@@ -11,4 +12,3 @@ that is the question
 7. Api auth (JWT)
 8. Auth system
 9. ToDoList
-10. Vue draggable

@@ -43,16 +43,12 @@
 </template>
 
 <script>
+import { auth } from '../js/auth.js'
+
 export default {
     computed: {
         auth() {
-            let auth = JSON.parse(localStorage.getItem('auth'))
-            
-            if ( auth ) {
-                return auth
-            } else {
-                return false
-            }
+            return auth()
         }
     }
 }

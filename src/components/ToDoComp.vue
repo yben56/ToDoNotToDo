@@ -1,23 +1,39 @@
 <template>
+<div v-if="auth" class="ToDo container">
     <div class="row justify-content-center">
-        <div class="list-group col-md-6" irole="tablist">
-            <a
+        <div class="col-md-12">
+            <router-link to="/ToDo">
+                <button type="button" class="btn btn-sm btn-link mt-2">ToDo /</button>
+            </router-link>
+            <button type="button" class="btn btn-sm btn-primary float-end">
+                <i class="fa-solid fa-plus"></i>
+                {{ $t('AddList') }}
+            </button>
+        </div>
+        <hr><br>
+        <div class="list-group col-md-6">
+            <router-link
+                :to="`/List/${item.id}`"
                 v-for="item in ToDoData" :key="item.id"
-                class="list-group-item list-group-item-action"
-                data-bs-toggle="list"
-                href="#list-home"
-                role="tab"
-                aria-controls="list-home"
+                class="list-group-item list-group-item-action p-3"
             >
                 {{ item.todo }}
                 <span class="badge bg-danger rounded-pill float-end">{{ item.list_num}}</span>
-            </a>
+            </router-link>
         </div>
     </div>
+</div>
 </template>
 
 <script>
-export default {	
+import { auth } from '../js/auth.js'
+
+export default {
+    computed: {
+        auth() {
+            return auth()
+        }
+    },
 	data() {
         return {
             ToDoData: []

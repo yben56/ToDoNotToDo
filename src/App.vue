@@ -1,6 +1,7 @@
 <template>
   <masthead-comp />
   <nav-comp />
+  <router-view></router-view>
   <footer-comp />
 </template>
 
