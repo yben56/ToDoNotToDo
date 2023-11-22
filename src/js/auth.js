@@ -38,7 +38,7 @@ const authentication = createStore({
       */
 
       localStorage.removeItem('auth')
-      window.location.reload()
+      window.location.href = '/'
     }
   },
   actions: {
