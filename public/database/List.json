@@ -1,4 +1,4 @@
 [
-    {"id": 1, "list": "大潤發"},
-    {"id" : 2, "list":  "好事多"}
+    {"id" : 1,  "listId": 1, "task":  "Lemon"},
+    {"id" : 2,  "listId": 1, "task":  "蘇打水"}
 ]
