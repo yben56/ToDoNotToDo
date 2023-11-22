@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 
-export default createStore({
+const authentication = createStore({
   state: {
     token: null,
     id: null,
@@ -10,7 +10,7 @@ export default createStore({
     signup( state, data) {
       localStorage.setItem('auth', JSON.stringify(data))
       localStorage.setItem('signupsuccess', true)
-      window.location.reload()
+      window.location.href = '/'
     },
     start( state ) {
       localStorage.setItem('signupsuccess', false)
@@ -28,7 +28,7 @@ export default createStore({
       //longturn
       //JSON.parse(localStorage.getItem('auth'))
       localStorage.setItem('auth', JSON.stringify(data))
-      window.location.reload()
+      window.location.href = '/'
     },
     logout( state ) {
       /*
@@ -48,7 +48,7 @@ export default createStore({
     start ({ commit }) {
       commit('start')
     },
-    async login({ commit }, data) {
+    login({ commit }, data) {
       try {
         commit('login', data)
       } catch (error) {
@@ -63,3 +63,11 @@ export default createStore({
     isAuthenticated: (state) => !!state.token,
   },
 })
+
+const auth = () => {
+    let data = JSON.parse(localStorage.getItem('auth'))
+    
+    return data || false
+}
+
+export { authentication, auth }
