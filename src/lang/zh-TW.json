@@ -3,7 +3,9 @@
     "en-US" : "英文(美國)",
     "zh-TW" : "中文(台灣)",
 
+    "AddNewList" : "+新增事項...",
     "AddToDo" : "新增清單",
+    "AddToDoInfo" : "* 因為無資料庫, 目前是使用ToDo.json模擬 (此表單無法POST存入資料庫)",
     "Congratulations" : "恭喜!",
     "Contact" : "聯絡我們",
     "Email" : "電子郵件",
@@ -12,6 +14,8 @@
     "FullName" : "姓名",
     "Index" : "首頁",
     "Lastname" : "姓氏",
+    "ListCompInfoTitle" : "模擬新增/刪除",
+    "ListCompInfoInfo" : "請直接輸入文字存入 或 直接點擊X刪除",
     "Login" : "登入",
     "Logout" : "登出",
     "Message" : "訊息",

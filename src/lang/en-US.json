@@ -3,7 +3,9 @@
     "en-US" : "En-US",
     "zh-TW" : "Zh-TW",
 
+    "AddNewList" : "+Add New List...",
     "AddToDo" : "Add New ToDoList",
+    "AddToDoInfo" : "*Because no DB, Currently use ToDo.json simulation (This Form couldn't post save.)",
     "Congratulations" : "Congratulations!",
     "Contact" : "Contact",
     "Email" : "Email",
@@ -12,6 +14,8 @@
     "FullName" : "Full Name",
     "Index" : "Home",
     "Lastname" : "Last Name",
+    "ListCompInfoTitle" : "Sim Add/Delete",
+    "ListCompInfoInfo" : "Please enter text for save or press X to delete.",
     "Login" : "Login",
     "Logout" : "Logout",
     "Message" : "Message",

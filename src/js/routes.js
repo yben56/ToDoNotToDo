@@ -9,11 +9,12 @@ import ContactComp from '@/components/Pages/ContactComp.vue'
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-      { path: '/SignupSuccess', component: SignupSuccessComp },
       { path: '/', component: IndexComp },
-      { path: '/ToDo', component: ToDoComp },
-      { path: '/List', component: ListComp },
       { path: '/Contact', component: ContactComp },
+      //{ path: '/List', component: ListComp, props: (route) => ({ id: route.query.id }) },
+      { path: '/List/:todoid', component: ListComp },
+      { path: '/SignupSuccess', component: SignupSuccessComp },
+      { path: '/ToDo', component: ToDoComp }, 
     ],
 })
   

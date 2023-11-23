@@ -7,7 +7,7 @@
       </div>
 
       <div class="col-md-12">
-        <i class="text-danger">* 因為無資料庫, 目前是使用ToDo.json模擬 (此表單無法POST存入資料庫)</i>
+        <i class="text-danger">{{ $t('AddToDoInfo')}}</i>
       </div>
       <div class="col-md-12">
         <button type="submit" class="btn btn-danger submit">{{ $t('Submit')}}</button>

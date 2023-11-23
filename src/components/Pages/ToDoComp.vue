@@ -15,12 +15,9 @@
             </component>
         </div>
         <hr><br>
-        <div class="list-group col-md-6">
-            <router-link
-                :to="`/List/${item.id}`"
-                v-for="item in ToDoData" :key="item.id"
-                class="list-group-item list-group-item-action p-3"
-            >
+        <div class="list-group list-group-flush col-md-6">
+            <router-link :to="`/List/${item.id}`" v-for="item in ToDoData" :key="item.id" class="list-group-item list-group-item-action p-3">
+                <i class="fa-solid fa-list"></i> 
                 {{ item.todo }}
                 <span class="badge bg-danger rounded-pill float-end">{{ item.list_num}}</span>
             </router-link>
