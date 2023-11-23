@@ -17,12 +17,14 @@ app.use(router)
 //Auth
 import { authentication, auth } from '@/js/auth'
 app.use(authentication)
+app.config.globalProperties.Auth = auth
 
 //Lang
-app.use(lang)
-app.component('LangComp', LangComp)
 import lang from '@/js/lang.js'
+app.use(lang)
+
 import LangComp from '@/components/LangComp.vue'
+app.component('LangComp', LangComp)
 
 //Axios (ajax)
 import axios from 'axios'

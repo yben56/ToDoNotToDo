@@ -1,5 +1,5 @@
 <template>
-<div v-if="auth" class="ToDo container">
+<div v-if="Auth()" class="ToDo container">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <router-link to="/ToDo">
@@ -30,14 +30,7 @@
 </template>
 
 <script>
-import { auth } from '@/js/auth.js'
-
 export default {
-    computed: {
-        auth() {
-            return auth()
-        }
-    },
 	data() {
         return {
             ToDoData: []

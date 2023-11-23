@@ -1,5 +1,5 @@
 <template>
-    <div class="nav container" v-if="auth"> 
+    <div class="nav container" v-if="Auth()"> 
 		<div class="col-md-12 p-2 mt-3">
 			<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 				<li class="nav-item" role="presentation">
@@ -48,18 +48,6 @@
 		</div> 
     </div>
 </template>
-
-<script>
-import { auth } from '@/js/auth.js'
-
-export default {
-    computed: {
-        auth() {
-            return auth()
-        }
-    }
-}
-</script>
 
 <style scoped lang="scss">
 .nav-item {

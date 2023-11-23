@@ -7,7 +7,7 @@
                         <lang-comp />
                     </div>
                     <div class="auth">
-                        <div v-if="!auth">
+                        <div v-if="!Auth()">
                             <!--Login-->
                             <component :is="`modal-comp`" template="LoginComp" :title="$t('Login')">
                                 <template v-slot:toggle-btn>
@@ -30,7 +30,7 @@
                         </div>
                         <div v-else>
                             <div class="btn-group">
-                                <b class="mt-1 me-3">{{ auth.firstname }}</b>
+                                <b class="mt-1 me-3">{{ Auth.firstname }}</b>
                                 <!--Logout-->
                                 <LogoutComp />
                             </div>
@@ -41,18 +41,6 @@
         </div>
     </div>
 </template>
-
-<script>
-import { auth } from '@/js/auth.js'
-
-export default {
-    computed: {
-        auth() {
-            return auth()
-        }
-    }
-}
-</script>
 
 <style scoped lang="scss">
 #masthead {
