@@ -22,11 +22,13 @@
     "Message" : "Message",
     "Password" : "Password",
     "PhoneNumber" : "Phone Number",
+    "Privacy" : "Privacy Policy",
     "RePassword" : "Re Password",
     "Signup" : "Sign Up",
     "Start" : "Start",
     "StartInfo" : "Registration successful! You can now log in and start exploring our services. Please check your profile to discover more features.",
     "Submit" : "Submit",
+    "Terms" : "Terms of Service",
     "ToDoList" : "ToDoList",
 
     "ErrorInvalidatEmail" : "Please provide a valid email address.",
