@@ -29,11 +29,13 @@
                             </component>
                         </div>
                         <div v-else>
-                            <div class="btn-group">
-                                <b class="mt-1 me-3">{{ Auth.firstname }}</b>
-                                <!--Logout-->
-                                <LogoutComp />
-                            </div>
+                            <img class="rounded-circle shadow-4-strong img-thumbnail" src="@/assets/images/default-thumb.png" />
+                            <b class="mt-1 ms-3 me-3">{{ Auth().firstname }}</b>
+                            <MenuComp/>
+                    
+                            
+                            
+                        
                         </div>
                     </div>
                 </div>
@@ -41,6 +43,14 @@
         </div>
     </div>
 </template>
+
+<script>
+import MenuComp from '@/components/MenuComp.vue'
+
+export default {
+  components: { MenuComp }
+}
+</script>
 
 <style scoped lang="scss">
 #masthead {
@@ -63,6 +73,11 @@
 
     .login-btn {
         margin: 0 10px;
+    }
+
+    .img-thumbnail {
+        display: inline;
+        width: 30px;
     }
 }
 </style>

@@ -2,9 +2,7 @@
 <div v-if="Auth()" class="ToDo container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <router-link to="/ToDo">
-                <button type="button" class="btn btn-sm btn-link mt-2">ToDo /</button>
-            </router-link>
+           
             <component :is="`modal-comp`" template="AddToDoComp" :title="$t('AddToDo')">
                 <template v-slot:toggle-btn>
                     <button class="btn btn-sm btn-primary float-end" data-bs-toggle="modal" data-bs-target="#AddToDoComp" >
@@ -27,7 +25,12 @@
 </template>
 
 <script>
+import NavComp from '@/components/NavComp.vue'
+
 export default {
+    components: {
+        NavComp
+    },
 	data() {
         return {
             ToDoData: []
