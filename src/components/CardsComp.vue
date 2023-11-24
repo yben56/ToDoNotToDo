@@ -1,7 +1,7 @@
 <template>
     <div class="cards">
         <div class="row justify-content-center">
-            <div class="col-lg-12">
+            <div class="col-lg-2">
                 <div class="card mb-3">
                     <img src="@/assets/images/carousel/1.jpg" class="card-img-top">
                     <div class="card-body">
@@ -10,7 +10,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12">
+            <div class="col-lg-2">
                 <div class="card mb-3">
                     <img src="@/assets/images/carousel/2.jpg" class="card-img-top">
                     <div class="card-body">
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12">
+            <div class="col-lg-2">
                 <div class="card mb-3">
                     <img src="@/assets/images/carousel/3.jpg" class="card-img-top">
                     <div class="card-body">
