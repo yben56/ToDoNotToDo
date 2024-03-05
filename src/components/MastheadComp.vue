@@ -32,10 +32,6 @@
                             <img class="rounded-circle shadow-4-strong img-thumbnail" src="@/assets/images/default-thumb.png" />
                             <b class="mt-1 ms-3 me-3">{{ Auth().firstname }}</b>
                             <MenuComp/>
-                    
-                            
-                            
-                        
                         </div>
                     </div>
                 </div>
